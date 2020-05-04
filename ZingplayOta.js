@@ -1,19 +1,16 @@
-var V2Ray = "SOCKS5 127.0.0.1:1086; SOCKS 127.0.0.1:1086; DIRECT;";
+// Created by Neon
+// *=======================*
+// Twitter : @prefisso
+// Website : nenno.1mb.site
+// *=======================*
 
-var domains = [
-  "appldnld.apple.com",
-  "appldnld.apple.com.akadns.net",
-  "appldnld.g.aaplimg.com",
-  "mesu.apple.com",
-  "mesu-cdn.apple.com.akadns.net",
-  "mesu-cdn.origin-apple.com.akadns.net",
-  "mesu.g.aaplimg.com",
-  "gdmf.apple.com",
-  "gdmf.apple.com.akadns.net"
-];
+var DIRECT = "DIRECT";
+var PROXY = "PROXY 127.0.0.1:80";
+var blacklist = {"appldnld.apple.com":1,"appldnld.apple.com.akadns.net":1,"appldnld.g.aaplimg.com":1,"mesu.apple.com":1,"mesu-cdn.apple.com.akadns.net":1,"mesu-cdn.origin-apple.com.akadns.net":1,"mesu.g.aaplimg.com":1,"gdmf.apple.com":1,"gdmf.apple.com.akadns.net":1,"ocsp.apple.com":1};
 
 function FindProxyForURL(url, host) {
-    if (dnsDomainIs(host, "ocsp.apple.com")){
+	// Block OCSP :)
+	if (dnsDomainIs(host, "ocsp.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
 
@@ -27,10 +24,18 @@ function FindProxyForURL(url, host) {
 		return "DIRECT";
 	}
 	
-    for (var i = domains.length - 1; i >= 0; i--) {
-    	if (dnsDomainIs(host, domains[i])) {
-            return V2Ray;
-    	}
+	host = host.toLowerCase();
+  for (i = 0; i < 30; i++) {
+    if (blacklist[host]) {
+      return PROXY;
     }
-    return "DIRECT";
+    var index = host.indexOf(".");
+    if (index == -1) {
+      break;
+    } else {
+      host = host.substring(index + 1);
+    }
+  }
+	
+	return "DIRECT";
 }
