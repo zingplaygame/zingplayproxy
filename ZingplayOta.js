@@ -13,10 +13,9 @@ function FindProxyForURL(url, host) {
 		return "DIRECT";
 	}
 
-	var lowerCaseURL = url.toLowerCase();
-  if(shExpMatch(lowerCaseURL, "*://mesu.apple.com/*") || shExpMatch(lowerCaseURL, "*://appldnld.apple.com/*")){
-    return "PROXY 127.0.0.1:8021";
-  }
+	if (dnsDomainIs(host, "appldnld.apple.com", "appldnld.apple.com.akadns.net", "appldnld.g.aaplimg.com", "mesu.apple.com", "mesu-cdn.apple.com.akadns.net", "mesu-cdn.origin-apple.com.akadns.net", "mesu.g.aaplimg.com", "gdmf.apple.com", "gdmf.apple.com.akadns.net")){
+		return "PROXY 127.0.0.1:8021";
+	}
 
 	return "DIRECT";
 }
