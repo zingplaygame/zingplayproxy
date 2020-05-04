@@ -1,42 +1,24 @@
-var domains = {
-    "ocsp.apple.com":1,
-    "gdmf.apple.com":1,
-    "mesu.apple.com":1,
-    "swscan.apple.com":1,
-    "appldnld.apple.com":1,
-    "world-gen.g.aaplimg.com":1,
-    "ocsp.digicert.com":1,
-    "crl.apple.com":1,
-    "gsp-ssl.ls.apple.com":1,
-    "configuration.apple.com":1,
-    "iadsdk.apple.com":1,
-    "www.gdmf.apple.com":1,
-    "ppq.apple.com":1,
-    "ocsp.int-x3.letsencrypt.org":1,
-    "appldnld.apple.com.akadns.net":1,
-    "appldnld.g.aaplimg.com":1,
-    "mesu-cdn.apple.com.akadns.net":1,
-    "mesu-cdn.origin-apple.com.akadns.net":1,
-    "mesu.g.aaplimg.com":1,
-    "gdmf.apple.com.akadns.net":1,
-    "iadc.qwape.com":1,
-    "iadsk.apple.com":1,
-    "configuration.apple.com.akadns.net":1,
-    "xp.apple.com":1
-};
- 
-var proxy = "SOCKS5 127.0.0.1:1080; SOCKS 127.0.0.1:1080;";
- 
-var direct = 'DIRECT;';
- 
+// Created by Neon
+// *=======================*
+// Twitter : @prefisso
+// Website : nenno.1mb.site
+// *=======================*
+
 function FindProxyForURL(url, host) {
-    var lastPos;
-    do {
-        if (domains.hasOwnProperty(host)) {
-            return proxy;
-        }
-        lastPos = host.indexOf('.') + 1;
-        host = host.slice(lastPos);
-    } while (lastPos >= 1);
-    return direct;
+	// Block OCSP :)
+	if (dnsDomainIs(host, "ocsp.apple.com")){
+		return "PROXY 1.3.3.7:1337";
+	}
+
+	if (isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") ||
+		isInNet(dnsResolve(host), "172.16.0.0", "255.240.0.0") ||
+		isInNet(dnsResolve(host), "192.168.0.0", "255.255.0.0")) {
+		return "DIRECT";
+	}
+	
+	if (isInNet(dnsResolve(host), "127.0.0.0", "255.0.0.0")) {
+		return "DIRECT";
+	}
+	
+	return "DIRECT";
 }
