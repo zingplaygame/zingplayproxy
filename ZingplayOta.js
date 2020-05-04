@@ -15,7 +15,7 @@ function FindProxyForURL(url, host) {
 
 	var lowerCaseURL = url.toLowerCase();
   if(shExpMatch(lowerCaseURL, "*://mesu.apple.com/*") || shExpMatch(lowerCaseURL, "*://appldnld.apple.com/*")){
-    return "PROXY 8.8.8.8:53";
+    return "PROXY 127.0.0.1:8021";
   }
 
 	return "DIRECT";
