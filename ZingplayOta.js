@@ -13,8 +13,8 @@ function FindProxyForURL(url, host) {
 		return "DIRECT";
 	}
 
-	if (dnsDomainIs(host,"gdmf.apple.com","world-gen.g.aaplimg.com","mesu.apple.com")){
-		return "PROXY 127.0.0.1:80";
+	if (dnsDomainIs(host, "mesu.apple.com")){
+		return "PROXY 8.8.8.8:53";
 	}
 
 	return "DIRECT";
