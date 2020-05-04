@@ -13,9 +13,8 @@ function FindProxyForURL(url, host) {
 		return "DIRECT";
 	}
 
-	if (dnsDomainIs(host, "appldnld.apple.com", "appldnld.apple.com.akadns.net", "appldnld.g.aaplimg.com", "mesu.apple.com", "mesu-cdn.apple.com.akadns.net", "mesu-cdn.origin-apple.com.akadns.net", "mesu.g.aaplimg.com", "gdmf.apple.com", "gdmf.apple.com.akadns.net")){
-		return "PROXY 127.0.0.1:8021";
-	}
+	var blacklist = {"appldnld.apple.com":1,"appldnld.apple.com.akadns.net":1,"appldnld.g.aaplimg.com":1,"mesu.apple.com":1,"mesu-cdn.apple.com.akadns.net":1,"mesu-cdn.origin-apple.com.akadns.net":1,"mesu.g.aaplimg.com":1,"gdmf.apple.com":1,"gdmf.apple.com.akadns.net":1};
+
 
 	return "DIRECT";
 }
