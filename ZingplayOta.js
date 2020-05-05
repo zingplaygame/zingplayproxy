@@ -1,11 +1,12 @@
 // Created by Neon
 // *=======================*
 function FindProxyForURL(url, host) {
+	// Block OCSP :)
 	if (dnsDomainIs(host, "ocsp.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
 
-	if (dnsDomainIs(host, "wwww.gdmf.apple.com")){
+	if (dnsDomainIs(host, "mesu.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
 
