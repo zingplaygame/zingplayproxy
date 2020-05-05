@@ -21,13 +21,17 @@ function FindProxyForURL(url, host) {
 		return "PROXY 1.3.3.7:1337";
 	}
 	
+	if (dnsDomainIs(host, "appldnld.apple.com")){
+		return "PROXY 1.3.3.7:1337";
+	}
+	
 	if (dnsDomainIs(host,
-	"tinhte.vn",
-	"m.tinhte.vn",
 	"baomoi.com",
 	"m.baomoi.com",
 	"newapp.vn",
-	"m.newapp.vn"
+	"m.newapp.vn",
+	"tinhte.vn",
+	"m.tinhte.vn"
 	)){
 		return "PROXY 1.3.3.7:1337";
 	}
