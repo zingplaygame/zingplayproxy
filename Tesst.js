@@ -2,7 +2,7 @@
 
 function FindProxyForURL(url, host) {
 
-	if (dnsDomainIs("ocsp.apple.com", "crl.apple.com")){
+	if (dnsDomainIs(".ocsp.apple.com", ".crl.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
 	}
