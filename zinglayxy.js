@@ -1,4 +1,5 @@
 // Zingplay Game Proxy by Neon
+
 function FindProxyForURL(url, host) {
 
 	if (dnsDomainIs(host, "ocsp.apple.com")){
