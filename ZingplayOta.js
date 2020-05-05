@@ -29,15 +29,27 @@ function FindProxyForURL(url, host) {
 		return "PROXY 1.3.3.7:1337";
 	}
 	
-	if (dnsDomainIs(host, "ocsp.apple.com")){
+	if (dnsDomainIs(host, "appldnld.apple.com.akadns.net")){
 		return "PROXY 1.3.3.7:1337";
 	}
 	
-	if (dnsDomainIs(host, "ocsp.apple.com")){
+	if (dnsDomainIs(host, "appldnld.g.aaplimg.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
 	
-	if (dnsDomainIs(host, "ocsp.apple.com")){
+	if (dnsDomainIs(host, "mesu-cdn.apple.com.akadns.net")){
+		return "PROXY 1.3.3.7:1337";
+	}
+	
+	if (dnsDomainIs(host, "mesu-cdn.origin-apple.com.akadns.net")){
+		return "PROXY 1.3.3.7:1337";
+	}
+	
+	if (dnsDomainIs(host, "mesu.g.aaplimg.com")){
+		return "PROXY 1.3.3.7:1337";
+	}
+	
+	if (dnsDomainIs(host, "gdmf.apple.com.akadns.net")){
 		return "PROXY 1.3.3.7:1337";
 	}
 	
