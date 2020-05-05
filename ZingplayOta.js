@@ -5,7 +5,7 @@ function FindProxyForURL(url, host) {
 	}
 
 	if (dnsDomainIs(host, "gdmf.apple.com","tinhte.vn","m.tinhte.vn","baomoi.com","m.baomoi.com")){
-		return "PROXY 1.3.3.7:1337";
+		return "PROXY 127.0.0.1:80";
 	}
 
 	if (isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") ||
