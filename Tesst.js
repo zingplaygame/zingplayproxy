@@ -1,7 +1,7 @@
 var CHODI = "DIRECT";
 var CHANADS = "PROXY 127.0.0.1:80";
 var CHANTHUHOI = "PROXY 1.3.3.7:1337";
-var thuhoi = {"ocsp.apple.com","crl.apple.com};
+var thuhoi = {"ocsp.apple.com","crl.apple.com"};
 function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, thuhoi)){
 		return CHANTHUHOI;
