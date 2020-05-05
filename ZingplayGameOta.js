@@ -1,6 +1,7 @@
-// ZingplayOta by Neon
+// Zingplay Game Ota by Neon
+
 function FindProxyForURL(url, host) {
-	// Bock Revoke :)
+
 	if (dnsDomainIs(host, "ocsp.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
@@ -15,7 +16,6 @@ function FindProxyForURL(url, host) {
 		return "DIRECT";
 	}
 	
-	// Block Ota Update
 	if (dnsDomainIs(host, "mesu.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
