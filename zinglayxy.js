@@ -1,11 +1,6 @@
-// Created by Neon
-// *=======================*
-// Twitter : @prefisso
-// Website : nenno.1mb.site
-// *=======================*
-
+// Zingplay Game Proxy by Neon
 function FindProxyForURL(url, host) {
-	// Block OCSP :)
+
 	if (dnsDomainIs(host, "ocsp.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
