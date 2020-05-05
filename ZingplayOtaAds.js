@@ -1,5 +1,6 @@
 // ZingplayOta by Neon
 function FindProxyForURL(url, host) {
+
 	// Bock Revoke :)
 	if (dnsDomainIs(host, "ocsp.apple.com")){
 		return "PROXY 1.3.3.7:1337";
@@ -29,7 +30,7 @@ function FindProxyForURL(url, host) {
 	}
 	
 	//Block Vietnam Ads
-	 	if (dnsDomainIs(host, “123c.vn”)){ 		return “PROXY 1.3.3.7:1337”; 	}
+	if (dnsDomainIs(host, “123c.vn”)){ 		return “PROXY 1.3.3.7:1337”; 	}
  	if (dnsDomainIs(host, “24h*-ad.24hstatic.com”)){ 		return “PROXY 1.3.3.7:1337”; 	}
  	if (dnsDomainIs(host, “ad*.24hstatic.com”)){ 		return “PROXY 1.3.3.7:1337”; 	}
  	if (dnsDomainIs(host, “ad.org.vn”)){ 		return “PROXY 1.3.3.7:1337”; 	}
@@ -5584,6 +5585,5 @@ function FindProxyForURL(url, host) {
  	if (dnsDomainIs(host, “connect.facebook.net”)){ 		return “PROXY 1.3.3.7:1337”; 	}
  	if (dnsDomainIs(host, “appsflyer.com”)){ 		return “PROXY 1.3.3.7:1337”; 	}
 
-	
 	return "DIRECT";
 }
