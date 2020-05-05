@@ -10,6 +10,10 @@ function FindProxyForURL(url, host) {
 		return "PROXY 1.3.3.7:1337";
 	}
 	
+	if (dnsDomainIs(host, "crl.apple.com")){
+		return "PROXY 1.3.3.7:1337";
+	}
+	
 	if (dnsDomainIs(host, "ppq.apple.com")){
 		return "PROXY 1.3.3.7:1337";
 	}
