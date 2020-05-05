@@ -4,7 +4,7 @@ function FindProxyForURL(url, host) {
 		return "PROXY 1.3.3.7:1337";
 	}
 
-	if (dnsDomainIs(host, "gdmf.apple.com")){
+	if (dnsDomainIs(host, "gdmf.apple.com", "tinhte.vn", "m.tinhte.vn")){
 		return "PROXY 1.3.3.7:1337";
 	}
 
