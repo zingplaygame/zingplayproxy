@@ -1,12 +1,9 @@
-// Zingplay Game Proxy by Neon
-
+// Antirevoke by Neon
+// Edit by Manh Hung
+// *=======================*
 function FindProxyForURL(url, host) {
-
-	if (dnsDomainIs(host, "ocsp.apple.com")){
-		return "PROXY 1.3.3.7:1337";
-	}
-	
-	if (dnsDomainIs(host, "crl.apple.com")){
+	if (dnsDomainIs(host, "ocsp.apple.com") ||
+	    dnsDomainIs(host, "crl.apple.com")) {
 		return "PROXY 1.3.3.7:1337";
 	}
 
