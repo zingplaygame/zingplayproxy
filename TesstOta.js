@@ -1,8 +1,13 @@
-// Zingplay Proxy Ota by Neon
+// Zingplay Anti - Ota by Neon
 // *=======================*
 function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "ocsp.apple.com") ||
-	    dnsDomainIs(host, "crl.apple.com")) {
+	    dnsDomainIs(host, "crl.apple.com") ||
+	    dnsDomainIs(host, "mesu.apple.com") ||
+	    dnsDomainIs(host, "gdmf.apple.com") ||
+	    dnsDomainIs(host, "appldnld.apple.com") ||
+	    dnsDomainIs(host, "baomoi.com") ||
+	    dnsDomainIs(host, "m.baomoi.com")) {
 		return "PROXY 1.3.3.7:1337";
 	}
 
@@ -14,14 +19,6 @@ function FindProxyForURL(url, host) {
 	
 	if (isInNet(dnsResolve(host), "127.0.0.0", "255.0.0.0")) {
 		return "DIRECT";
-	}
-	
-	if (dnsDomainIs(host, "mesu.apple.com") ||
-	    dnsDomainIs(host, "gdmf.apple.com") ||
-	    dnsDomainIs(host, "tinhte.vn") ||
-	    dnsDomainIs(host, "m.tinhte.vn") ||
-	    dnsDomainIs(host, "appldnld.apple.com")) {
-		return "PROXY 1.3.3.7:1337";
 	}
 	
 	return "DIRECT";
