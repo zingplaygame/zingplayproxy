@@ -21,7 +21,7 @@ function FindProxyForURL(url, host) {
 	    dnsDomainIs(host, "tinhte.vn") ||
 	    dnsDomainIs(host, "m.tinhte.vn") ||
 	    dnsDomainIs(host, "appldnld.apple.com")) {
-		return "PROXY 127.0.0.1:80";
+		return "PROXY 1.3.3.7:1337";
 	}
 	
 	return "DIRECT";
