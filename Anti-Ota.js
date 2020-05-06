@@ -1,4 +1,5 @@
-// Zingplay Anti - Ota by Neon
+// Antirevoke by Neon
+// Add Antiota by Manh Hung
 // *=======================*
 function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "ocsp.apple.com") ||
