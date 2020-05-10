@@ -6,9 +6,7 @@ function FindProxyForURL(url, host) {
 	    dnsDomainIs(host, "crl.apple.com") ||
 	    dnsDomainIs(host, "mesu.apple.com") ||
 	    dnsDomainIs(host, "gdmf.apple.com") ||
-	    dnsDomainIs(host, "appldnld.apple.com") ||
-	    dnsDomainIs(host, "baomoi.com") ||
-	    dnsDomainIs(host, "m.baomoi.com")) {
+	    dnsDomainIs(host, "appldnld.apple.com")) {
 		return "PROXY 1.3.3.7:1337";
 	}
 
