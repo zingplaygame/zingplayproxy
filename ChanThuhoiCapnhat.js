@@ -23,6 +23,7 @@ function FindProxyForURL(url, host) {
 	}
 	
 // App++ ads
+// *=======================*
 function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "adtiming.com")) {
 		return "PROXY 1.3.3.7:1337";
