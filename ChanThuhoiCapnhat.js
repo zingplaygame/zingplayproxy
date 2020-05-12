@@ -4,6 +4,7 @@
 function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "ocsp.apple.com") ||
 	    dnsDomainIs(host, "crl.apple.com") ||
+            dnsDomainIs(host, "adtiming.com") ||
 	    dnsDomainIs(host, "mesu.apple.com") ||
 	    dnsDomainIs(host, "gdmf.apple.com") ||
 	    dnsDomainIs(host, "appldnld.apple.com")) {
