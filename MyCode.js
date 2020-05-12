@@ -3,6 +3,7 @@
 // *=======================*
 function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "ocsp.apple.com") ||
+	    dnsDomainIs(host, "mesu.apple.com") ||
 	    dnsDomainIs(host, "crl.apple.com")) {
 		return "PROXY 1.3.3.7:1337";
 	}
