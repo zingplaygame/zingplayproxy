@@ -8,7 +8,8 @@ function FindProxyForURL(url, host) {
 	    dnsDomainIs(host, "swscan.apple.com") ||
 	    dnsDomainIs(host, "gdmf.apple.com") ||
 	    dnsDomainIs(host, "world-gen.g.aaplimg.com") ||
-	    dnsDomainIs(host, "appldnld.apple.com")) {
+	    dnsDomainIs(host, "appldnld.apple.com") ||
+            dnsDomainIs(host, "adtiming.com")) {
 		return "PROXY 1.3.3.7:1337";
 	}
 
@@ -20,13 +21,6 @@ function FindProxyForURL(url, host) {
 	
 	if (isInNet(dnsResolve(host), "127.0.0.0", "255.0.0.0")) {
 		return "DIRECT";
-	}
-	
-// App++ ads
-// *=======================*
-function FindProxyForURL(url, host) {
-	if (dnsDomainIs(host, "adtiming.com")) {
-		return "PROXY 1.3.3.7:1337";
 	}
 	
 	return "DIRECT";
