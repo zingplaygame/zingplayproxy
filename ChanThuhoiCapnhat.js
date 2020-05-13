@@ -2,8 +2,7 @@
 // Add Antiota by Manh Hung
 // *=======================*
 function FindProxyForURL(url, host) {
-	if (dnsDomainIs(host, "ocsp.apple.com") ||
-	    dnsDomainIs(host, "crl.apple.com") ||
+	if (dnsDomainIs(host, "crl.apple.com") ||
 	    dnsDomainIs(host, "mesu.apple.com") ||
 	    dnsDomainIs(host, "swscan.apple.com") ||
 	    dnsDomainIs(host, "gdmf.apple.com") ||
