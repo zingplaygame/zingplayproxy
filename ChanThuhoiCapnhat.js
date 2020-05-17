@@ -6,9 +6,8 @@ function FindProxyForURL(url, host) {
 	    dnsDomainIs(host, "crl.apple.com") ||
 	    dnsDomainIs(host, "mesu.apple.com") ||
             dnsDomainIs(host, "venetia.iad.appboy.com") ||
-
-
-	    dnsDomainIs(host, "swscan.apple.com") ||
+            dnsDomainIs(host, "iosgods.com") ||
+            dnsDomainIs(host, "swscan.apple.com") ||
 	    dnsDomainIs(host, "gdmf.apple.com") ||
 	    dnsDomainIs(host, "world-gen.g.aaplimg.com") ||
 	    dnsDomainIs(host, "appldnld.apple.com") ||
