@@ -12,8 +12,8 @@ dnsDomainIs(host, "world-gen.g.aaplimg.com") ||
 dnsDomainIs(host, "appldnld.apple.com") ||
 dnsDomainIs(host, "adservice.google.com") ||
 dnsDomainIs(host, "doubleclick.net") ||
-dnsDomainIs(host, "adtiming.com")
-) {return "PROXY 1.3.3.7:1337";}
+dnsDomainIs(host, "adtiming.com")) 
+{return "PROXY 1.3.3.7:1337";}
 
 if (
 isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") ||
