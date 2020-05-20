@@ -11,6 +11,7 @@ dnsDomainIs(host, "gdmf.apple.com") ||
 dnsDomainIs(host, "world-gen.g.aaplimg.com") ||
 dnsDomainIs(host, "appldnld.apple.com") ||
 dnsDomainIs(host, "adservice.google.com") ||
+dnsDomainIs(host, "unlimapps.com") ||
 dnsDomainIs(host, "doubleclick.net") ||
 dnsDomainIs(host, "adtiming.com")) 
 {return "PROXY 1.3.3.7:1337";}
