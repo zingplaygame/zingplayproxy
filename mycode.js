@@ -6,6 +6,7 @@ function FindProxyForURL(url, host)
 dnsDomainIs(host, "ocsp.apple.com") ||
 dnsDomainIs(host, "crl.apple.com") ||
 dnsDomainIs(host, "mesu.apple.com") ||
+dnsDomainIs(host, "www.gdmf.apple.com") ||
 dnsDomainIs(host, "iadc.qwape.com") ||
 dnsDomainIs(host, "iadsk.apple.com") ||
 dnsDomainIs(host, "ocsp.int-x3.letsencrypt.org") ||
