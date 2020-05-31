@@ -4,20 +4,20 @@
 function FindProxyForURL(url, host) 
 {if (
 dnsDomainIs(host, "ocsp.apple.com") ||
+dnsDomainIs(host, "ocsp.int-x3.letsencrypt.org") ||
 dnsDomainIs(host, "crl.apple.com") ||
 dnsDomainIs(host, "mesu.apple.com") ||
+dnsDomainIs(host, "gdmf.apple.com") ||
 dnsDomainIs(host, "www.gdmf.apple.com") ||
 dnsDomainIs(host, "iadc.qwape.com") ||
 dnsDomainIs(host, "iadsk.apple.com") ||
-dnsDomainIs(host, "ocsp.int-x3.letsencrypt.org") ||
 dnsDomainIs(host, "swscan.apple.com") ||
-dnsDomainIs(host, "gdmf.apple.com") ||
 dnsDomainIs(host, "world-gen.g.aaplimg.com") ||
 dnsDomainIs(host, "appldnld.apple.com") ||
+dnsDomainIs(host, "ppq.apple.com") ||
 dnsDomainIs(host, "adservice.google.com") ||
 dnsDomainIs(host, "unlimapps.com") ||
 dnsDomainIs(host, "doubleclick.net") ||
-dnsDomainIs(host, "pqq.apple.com") ||
 dnsDomainIs(host, "adtiming.com")) 
 {return "PROXY 1.3.3.7:1337";}
 
