@@ -33,7 +33,7 @@ isInNet(dnsResolve(host), "192.168.0.0", "255.255.0.0"))
 if (isInNet(dnsResolve(host), "127.0.0.0", "255.0.0.0")) 
 {return "DIRECT";}
 
-if (blacklist[host]) {
-      return "PROXY 127.0.0.1:80";}
+if (blacklist[host]) 
+{return "PROXY 127.0.0.1:80";}
 
 return "DIRECT";}
