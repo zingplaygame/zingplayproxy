@@ -2,7 +2,7 @@
 // Add Antiota by Manh Hung
 // *=======================*
 
-var blacklist = {"tinhte.vn":1,"baomoi.com":1};
+var blacklist = {"tinhte.vn":1,"m.baomoi.com":1,"m.tinhte.vn":1,"baomoi.com":1};
 
 function FindProxyForURL(url, host) 
 {if (
