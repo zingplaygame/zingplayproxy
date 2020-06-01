@@ -18,6 +18,7 @@ dnsDomainIs(host, "ppq.apple.com") ||
 dnsDomainIs(host, "adservice.google.com") ||
 dnsDomainIs(host, "unlimapps.com") ||
 dnsDomainIs(host, "doubleclick.net") ||
+dnsDomainIs(host, "baomoi.com") ||
 dnsDomainIs(host, "adtiming.com")) 
 {return "PROXY 1.3.3.7:1337";}
 
