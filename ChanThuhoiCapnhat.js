@@ -18,9 +18,13 @@ dnsDomainIs(host, "ppq.apple.com") ||
 dnsDomainIs(host, "adservice.google.com") ||
 dnsDomainIs(host, "unlimapps.com") ||
 dnsDomainIs(host, "doubleclick.net") ||
-dnsDomainIs(host, "baomoi.com") ||
 dnsDomainIs(host, "adtiming.com")) 
 {return "PROXY 1.3.3.7:1337";}
+
+if (
+dnsDomainIs(host, "baomoi.com") ||
+dnsDomainIs(host, "tinhte.vn")) 
+{return "PROXY 127.0.0.1:80";}
 
 if (
 isInNet(dnsResolve(host), "10.0.0.0", "255.0.0.0") ||
