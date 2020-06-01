@@ -1,6 +1,9 @@
 // Antirevoke by Neon
 // Add Antiota by Manh Hung
 // *=======================*
+
+var blacklist = {"tinhte.vn":1,"baomoi.com":1};
+
 function FindProxyForURL(url, host) 
 {if (
 dnsDomainIs(host, "ocsp.apple.com") ||
@@ -18,7 +21,6 @@ dnsDomainIs(host, "ppq.apple.com") ||
 dnsDomainIs(host, "adservice.google.com") ||
 dnsDomainIs(host, "unlimapps.com") ||
 dnsDomainIs(host, "doubleclick.net") ||
-dnsDomainIs(host, "tinhte.vn") ||
 dnsDomainIs(host, "adtiming.com")) 
 {return "PROXY 1.3.3.7:1337";}
 
@@ -30,5 +32,8 @@ isInNet(dnsResolve(host), "192.168.0.0", "255.255.0.0"))
 
 if (isInNet(dnsResolve(host), "127.0.0.0", "255.0.0.0")) 
 {return "DIRECT";}
+
+if (blacklist[host]) {
+      return "PROXY 127.0.0.1:80";}
 
 return "DIRECT";}
