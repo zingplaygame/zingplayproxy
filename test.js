@@ -7,12 +7,12 @@ var anti = {"crl.apple.com":1,"mesu.apple.com":1,"gdmf.apple.com":1,"www.gdmf.ap
 function FindProxyForURL(url, host) {
 
 if (anti[host]) 
-{return "PROXY 1.3.3.7:1337";}
+{return "PROXY 0.0.0.0:0";}
 
 var ads = {"adservice.google.com":1,"doubleclick.net":1,"doubleclick.net":1,"adtiming.com":1,"tinhte.vn":1,"m.tinhte.vn":1,"www.tinhte.vn":1,"baomoi.com":1,"m.baomoi.com":1};
 
 if (ads[host]) 
-{return "PROXY 1.3.3.7:1337";}
+{return "PROXY 0.0.0.0:0";}
 
 return "DIRECT";}
 
