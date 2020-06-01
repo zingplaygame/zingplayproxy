@@ -4,7 +4,7 @@ var anti = {"ocsp.apple.com":1,"crl.apple.com":1,"mesu.apple.com":1,"gdmf.apple.
 function FindProxyForURL(url, host) {
 if (anti[host]) 
 {return "PROXY 0.0.0.0";}
-return "PROXY 176.103.130.130";}
+return "SOCKS5 proxy.torguard.org:1080";}
 
 
 
