@@ -9,7 +9,7 @@ function FindProxyForURL(url, host) {
 if (anti[host]) 
 {return "PROXY 0.0.0.0:0";}
 
-var ads = {"adservice.google.com":1,"doubleclick.net":1,"doubleclick.net":1,"adtiming.com":1,"tinhte.vn":1,"m.tinhte.vn":1,"www.tinhte.vn":1,"baomoi.com":1,"m.baomoi.com":1};
+var ads = {"www.googleadservices.com":1,"googleadservices.com":1,"adservice.google.com":1,"doubleclick.net":1,"doubleclick.net":1,"adtiming.com":1,"tinhte.vn":1,"m.tinhte.vn":1,"www.tinhte.vn":1,"baomoi.com":1,"m.baomoi.com":1};
 
 if (ads[host]) 
 {return "PROXY 0.0.0.0:0";}
