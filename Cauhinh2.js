@@ -1,15 +1,6 @@
 // Block Revoke-Ota PPQ
 // *=======================*
 var anti = {
-
-"adservice.google.com":1,
-"doubleclick.net":1,
-"adtiming.com":1,
-"googleadservices.com":1,
-"googlesyndication.com":1,
-"launches.appsflyer.com":1,
-"google-analytics.com":1,
-
 "ocsp.apple.com":1,
 "crl.apple.com":1,
 "mesu.apple.com":1,
