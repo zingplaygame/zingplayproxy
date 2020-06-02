@@ -26,7 +26,7 @@ var ads = {
 "www.tinhte.vn":1,
 "ios.codevn.net":1} 
 if (ads[host]) 
-{return "176.103.130.130";} 
+{return "DNS 176.103.130.130";} 
 
 return "DIRECT";}
 
