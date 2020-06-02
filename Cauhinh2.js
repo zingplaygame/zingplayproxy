@@ -24,11 +24,9 @@ var ads = {
 "baomoi.com":1,
 "m.baomoi.com":1} 
 if (ads[host]) 
-{return "PROXY 0.0.0.0:0";} 
+{return "Tim Cook";} 
 
 return "DIRECT";}
-
-
 
 
 
