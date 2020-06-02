@@ -13,7 +13,17 @@ var anti = {
 "appldnld.apple.com":1};
 function FindProxyForURL(url, host) {
 if (anti[host]) 
-{return "PROXY 0.0.0.0:0";}
+{return "PROXY 0.0.0.0:0";} 
+var ads = {
+"adservice.google.com":1,
+"doubleclick.net":1,
+"adtiming.com":1,
+"googleadservices.com":1,
+"googlesyndication.com":1,
+"launches.appsflyer.com":1,
+"google-analytics.com":1};
+if (ads[host]) 
+{return "PROXY 0.0.0.0:0";} 
 return "DIRECT";}
 
 
