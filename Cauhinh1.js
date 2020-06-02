@@ -1,5 +1,6 @@
 // Block Revoke-Ota No PPQ
 // *=======================*
+function FindProxyForURL(url, host) {
 var anti = {
 "ocsp.apple.com":1,
 "crl.apple.com":1,
@@ -11,7 +12,6 @@ var anti = {
 "swscan.apple.com":1,
 "world-gen.g.aaplimg.com":1,
 "appldnld.apple.com":1}; 
-function FindProxyForURL(url, host) {
 if (anti[host]) 
 {return "PROXY Tim Cook";} 
 return "DIRECT";}
