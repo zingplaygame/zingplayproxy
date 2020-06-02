@@ -13,15 +13,11 @@ var anti = {
 "appldnld.apple.com":1}; 
 function FindProxyForURL(url, host) {
 if (anti[host]) 
-{return "PROXY 0.0.0.0:0";} 
+{return "PROXY Tim Cook";} 
 
-var ads = {
-"googleads.g.doubleclick.net":1,
-"adservice.google.com":1,
-"www.google-analytics.com":1,
-"launches.appsflyer.com":1} 
+var ads {} 
 if (ads[host]) 
-{return "PROXY 0.0.0.0:0";} 
+{return "PROXY Tim Cook";} 
 
 return "DIRECT";}
 
