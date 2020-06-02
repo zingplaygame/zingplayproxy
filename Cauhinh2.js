@@ -17,9 +17,14 @@ if (anti[host])
 {return "PROXY 0.0.0.0:0";} 
 
 var ads = {
-"tinhte.vn":1,
-"m.tinhte.vn":1,
-"www.tinhte.vn":1} 
+"googleads.g.doubleclick.net":1,
+"adservice.google.com":1,
+"www.google-analytics.com":1,
+"launches.appsflyer.com":1,
+
+"adservice.google.com":1,
+"adservice.google.com":1,
+"adservice.google.com":1} 
 if (ads[host]) 
 {return "PROXY 0.0.0.0:0";} 
 
