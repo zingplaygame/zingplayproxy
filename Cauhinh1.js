@@ -1,4 +1,4 @@
-// Block Revike-Ota No PPQ
+// Block Revoke-Ota No PPQ
 // *=======================*
 var anti = {
 "ocsp.apple.com":1,
