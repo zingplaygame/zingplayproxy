@@ -22,7 +22,7 @@ var ads = {
 "www.google-analytics.com":1,
 "launches.appsflyer.com":1} 
 if (ads[host]) 
-{return "PROXY Cặc";} 
+{return "PROXY Tim Cook";} 
 
 return "DIRECT";}
 
