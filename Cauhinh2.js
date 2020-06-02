@@ -1,6 +1,15 @@
 // Block Revoke-Ota PPQ
 // *=======================*
 var anti = {
+
+"adservice.google.com":1,
+"doubleclick.net":1,
+"adtiming.com":1,
+"googleadservices.com":1,
+"googlesyndication.com":1,
+"launches.appsflyer.com":1,
+"google-analytics.com":1,
+
 "ocsp.apple.com":1,
 "crl.apple.com":1,
 "mesu.apple.com":1,
@@ -15,16 +24,14 @@ var anti = {
 function FindProxyForURL(url, host) {
 if (anti[host]) 
 {return "PROXY 0.0.0.0:0";} 
+
 var ads = {
-"adservice.google.com":1,
-"doubleclick.net":1,
-"adtiming.com":1,
-"googleadservices.com":1,
-"googlesyndication.com":1,
-"launches.appsflyer.com":1,
-"google-analytics.com":1}; 
+"tinhte.vn":1,
+"m.tinhte.vn":1,
+"www.tinhte.vn":1} 
 if (ads[host]) 
 {return "PROXY 0.0.0.0:0";} 
+
 return "DIRECT";}
 
 
