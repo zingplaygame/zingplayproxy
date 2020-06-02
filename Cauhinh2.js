@@ -23,9 +23,10 @@ var ads = {
 "launches.appsflyer.com":1,
 "tinhte.vn":1,
 "m.tinhte.vn":1,
-"www.tinhte.vn":1} 
+"www.tinhte.vn":1,
+"ios.codevn.net":1} 
 if (ads[host]) 
-{return "176.103.130.130:5353";} 
+{return "176.103.130.130";} 
 
 return "DIRECT";}
 
