@@ -14,7 +14,7 @@ var anti = {
 "ppq.apple.com":1}; 
 function FindProxyForURL(url, host) {
 if (anti[host]) 
-{return "PROXY 0.0.0.0:0";} 
+{return "PROXY Tim Cook";} 
 
 var ads = {
 "googleads.g.doubleclick.net":1,
