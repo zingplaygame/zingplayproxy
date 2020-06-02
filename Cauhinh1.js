@@ -14,11 +14,6 @@ var anti = {
 function FindProxyForURL(url, host) {
 if (anti[host]) 
 {return "PROXY Tim Cook";} 
-
-var ads {} 
-if (ads[host]) 
-{return "PROXY Tim Cook";} 
-
 return "DIRECT";}
 
 
