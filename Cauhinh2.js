@@ -1,4 +1,4 @@
-// Antirevoke by Tui
+// Block Revoke-Ota PPQ
 // *=======================*
 var anti = {
 "ocsp.apple.com":1,
