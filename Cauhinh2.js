@@ -2,15 +2,9 @@
 // *=======================*
 function FindProxyForURL(url, host) {
 var anti = {
-"crl.apple.com":1,
 "mesu.apple.com":1,
-"gdmf.apple.com":1,
-"www.gdmf.apple.com":1,
-"iadc.qwape.com":1,
-"iadsk.apple.com":1,
-"swscan.apple.com":1,
-"world-gen.g.aaplimg.com":1,
-"appldnld.apple.com":1}; 
+"updates-http.cdn-apple.com":1,
+"gdmf.apple.com":1}; 
 if (anti[host]) 
 {return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook;";} 
 
