@@ -10,8 +10,7 @@ var anti = {
 "iadsk.apple.com":1,
 "swscan.apple.com":1,
 "world-gen.g.aaplimg.com":1,
-"appldnld.apple.com":1,
-"ppq.apple.com":1}; 
+"appldnld.apple.com":1}; 
 if (anti[host]) 
 {return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook;";} 
 
