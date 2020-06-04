@@ -2,7 +2,6 @@
 // *=======================*
 function FindProxyForURL(url, host) {
 var anti = {
-"ocsp.apple.com":1,
 "crl.apple.com":1,
 "mesu.apple.com":1,
 "gdmf.apple.com":1,
