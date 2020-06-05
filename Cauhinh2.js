@@ -1,4 +1,4 @@
-// Block Revoke-Ota PPQ
+// Block Ota Update
 // *=======================*
 function FindProxyForURL(url, host) {
 var anti = {
