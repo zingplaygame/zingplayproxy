@@ -2,7 +2,6 @@
 // *=======================*
 function FindProxyForURL(url, host) {
 var anti = {
-"ocsp.apple.com":1,
 "crl.apple.com":1,
 "mesu.apple.com":1,
 "gdmf.apple.com":1,
@@ -18,13 +17,13 @@ if (anti[host])
 {return "PROXY 0.0.0.0:0";} 
 
 var ads = {
+"ocsp.apple.com":1,
 "googleads.g.doubleclick.net":1,
 "adservice.google.com":1,
 "www.google-analytics.com":1,
 "launches.appsflyer.com":1} 
 if (ads[host]) 
-{return "PROXY Timcook";} 
-
+{return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook;";} 
 return "DIRECT";}
 
 
