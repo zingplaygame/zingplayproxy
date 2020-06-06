@@ -11,10 +11,16 @@ var anti = {
 "iadsk.apple.com":1,
 "swscan.apple.com":1,
 "world-gen.g.aaplimg.com":1,
-"ppq.apple.com":1,
-"appldnld.apple.com":1}; 
+"appldnld.apple.com":1,
+"appldnld.apple.com.akadns.net":1,
+"gdmf.apple.com.akadns.net":1,
+"mesu-cdn.apple.com.akadns.net":1,
+"mesu-cdn.origin-apple.com.akadns.net":1,
+"mesu.g.aaplimg.com":1,
+"gdmf.apple.com.akadns.net":1,
+"ppq.apple.com":1}; 
 if (anti[host]) 
-{return "PROXY 0.0.0.0:0";} 
+{return "PROXY 0.0.0.0:0; SOCKS5 0.0.0.0:0; SOCKS 0.0.0.0:0; SOCKS4 0.0.0.0:0";} 
 
 var ads = {
 "ocsp.apple.com":1,
@@ -25,7 +31,6 @@ var ads = {
 if (ads[host]) 
 {return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook; SOCKS4 Timcook";} 
 return "DIRECT";}
-
 
 
 
