@@ -18,6 +18,7 @@ var anti = {
 "mesu-cdn.origin-apple.com.akadns.net":1,
 "mesu.g.aaplimg.com":1,
 "gdmf.apple.com.akadns.net":1,
+"ocsp.int-x3.letsencrypt.org":1,
 "ppq.apple.com":1}; 
 if (anti[host]) 
 {return "PROXY 0.0.0.0:0; SOCKS5 0.0.0.0:0; SOCKS 0.0.0.0:0; SOCKS4 0.0.0.0:0";} 
