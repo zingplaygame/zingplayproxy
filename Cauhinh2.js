@@ -15,7 +15,7 @@ var anti = {
 "ppq.apple.com":1,
 "appldnld.apple.com":1}; 
 if (anti[host]) 
-{return "PROXY Timcook";} 
+{return "PROXY 0.0.0.0:0";} 
 
 var ads = {
 "googleads.g.doubleclick.net":1,
