@@ -23,7 +23,7 @@ var ads = {
 "www.google-analytics.com":1,
 "launches.appsflyer.com":1} 
 if (ads[host]) 
-{return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook;";} 
+{return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook; SOCKS4 Timcook";} 
 return "DIRECT";}
 
 
