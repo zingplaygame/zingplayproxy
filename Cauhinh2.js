@@ -18,8 +18,7 @@ var anti = {
 "mesu-cdn.origin-apple.com.akadns.net":1,
 "mesu.g.aaplimg.com":1,
 "gdmf.apple.com.akadns.net":1,
-"ocsp.int-x3.letsencrypt.org":1,
-"ppq.apple.com":1}; 
+"ocsp.int-x3.letsencrypt.org":1}; 
 
 var ads = {
 "ocsp.apple.com":1,
