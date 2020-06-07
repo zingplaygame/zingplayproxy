@@ -20,8 +20,13 @@ var anti = {
 "gdmf.apple.com.akadns.net":1,
 "ocsp.int-x3.letsencrypt.org":1,
 "ppq.apple.com":1}; 
-if (anti[host]) 
-{return "PROXY 0.0.0.0:0; SOCKS5 0.0.0.0:0; SOCKS 0.0.0.0:0; SOCKS4 0.0.0.0:0";} 
+
+var lastPos; 
+do {if (anti.hasOwnProperty(host)) 
+{return "PROXY 0.0.0.0:0; SOCKS5 0.0.0.0:0; SOCKS 0.0.0.0:0; SOCKS4 0.0.0.0:0";}
+lastPos = host.indexOf('.') + 1;
+host = host.slice(lastPos);} 
+while (lastPos >= 1);
 
 var ads = {
 "ocsp.apple.com":1,
@@ -29,12 +34,15 @@ var ads = {
 "adservice.google.com":1,
 "www.google-analytics.com":1,
 "launches.appsflyer.com":1} 
-if (ads[host]) 
+
+var lastPos;
+do {if (ads.hasOwnProperty(host)) 
 {return "PROXY Timcook; SOCKS5 Timcook; SOCKS Timcook; SOCKS4 Timcook";} 
+lastPos = host.indexOf('.') + 1;
+host = host.slice(lastPos);} 
+while (lastPos >= 1);
+
 return "DIRECT";}
-
-
-
 
 
 
