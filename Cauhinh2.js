@@ -21,7 +21,6 @@ var anti = {
 "ocsp.int-x3.letsencrypt.org":1}; 
 
 var ads = {
-"ocsp.apple.com":1,
 "googleads.g.doubleclick.net":1,
 "adservice.google.com":1,
 "www.google-analytics.com":1,
