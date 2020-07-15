@@ -1,5 +1,5 @@
 function FindProxyForURL(url, host) {
-if (dnsDomainIs(host, "mesu.apple.com") ||
-    dnsDomainIs(host, "gdmf.apple.com")){
+if (dnsDomainIs(host, "mesu.apple.Ycom") ||
+    dnsDomainIs(host, "gdmf.apple.Ycom")){
 return "PROXY Timcook";}
 return "DIRECT";}
